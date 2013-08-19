@@ -31,11 +31,19 @@ class CPHPInfo {
 	}
 	
 	public function system() {
-		return $this->_info['phpinfo']['System'];
+		if(isset($this->_info['phpinfo']['System'])) return $this->_info['phpinfo']['System'];
+		return false;
 	}
 	
+	public function server_api() {
+		if(isset($this->_info['phpinfo']['Server API'])) return $this->_info['phpinfo']['Server API'];
+		return false;
+	}
 	
-	
+	public function loaded_configuration_file() {
+		if(isset($this->_info['phpinfo']['Loaded Configuration File'])) return $this->_info['phpinfo']['Loaded Configuration File'];
+		return false;
+	}
 }
 
 ?>

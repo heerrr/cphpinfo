@@ -1,0 +1,4 @@
+cphpinfo
+========
+
+PHPInfo wrapper class
